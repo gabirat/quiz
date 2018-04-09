@@ -1,0 +1,38 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+::selection {
+    background-color: rgba(255,255,255, 0.5);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(180, 0, 9);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+.title_page {
+    margin: auto;
+    display: grid;
+    color: white;
+}
+
+.title_page > .title {
+    margin: auto;
+    text-align: center;
+    font-size: 2rem;
+    -webkit-text-stroke: 0.15rem black;
+}
+
+.title_page > #start {
+    text-transform: uppercase;
+    width: 25%;
+    margin: auto;
+    text-align: center;
+    padding: 1rem;
+    border: none;
+    background: rgb(17, 94, 211);
+}
