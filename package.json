@@ -13,10 +13,14 @@
   "keywords": [
     "quiz"
   ],
-  "author": "Rataj&Minntu",
+  "author": "Rataj&Minttu",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/gabirat/quiz/issues"
   },
-  "homepage": "https://github.com/gabirat/quiz#readme"
+  "homepage": "https://github.com/gabirat/quiz#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "socket.io": "^2.1.0"
+  }
 }
