@@ -12,6 +12,7 @@ server.listen(port, ()=>{
 });
 app.use(express.static(path.join(__dirname, "public")));
 app.use("/js", express.static(__dirname+"/node_modules/socket.io-client/dist"));
+app.use("/css", express.static(__dirname+"/css"));
 let users = [];
 io.on("connection", socket =>{
 	let registered = false;
