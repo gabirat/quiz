@@ -1,19 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Quiz ZSGóra</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Gugi" rel="stylesheet">
 	<script
 	src="https://code.jquery.com/jquery-3.3.1.min.js"
 	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 	crossorigin="anonymous"></script>
 	<script src="js/socket.io.js"></script>
 	<script src="js/main.js"></script>
+    <title>Quiz ZSGóra</title>
 </head>
+
 <body>
-	<input type="text" id="username">
-	<button id="login">Zaloguj</button>
+    <div class="title_page">
+        <div class="title">
+            <h4>Podaj nam troche informacji</h4>
+        </div>
+
+        <input type="text" id="name" placeholder="Imię">
+        <input type="text" id="surname" placeholder="Nazwisko">
+        <select name="school" id="school">
+            <option value="sp3">SP3</option>
+            <option value="sp1">SP1</option>
+            <option value="spNaratow">SP w Naratowie</option>
+            <option value="spWasosz">SP w Wąsoszu</option>
+        </select>
+
+        <button id="start">
+            Zatwierdź
+        </button>
+    </div>
 </body>
+
 </html>

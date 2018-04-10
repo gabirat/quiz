@@ -5,17 +5,26 @@ $(document).ready(function(){
 	function stripHTMLTags (input) {
 		return $("<div/>").text(input).html();
 	}
-	function validateUsername () {
-		username = stripHTMLTags($("#username").val().trim());
+	function register () {
+		let name = stripHTMLTags($("#name").val().trim());
+		let surname = stripHTMLTags($("#surname").val().trim());
+		let school = $("#school").val().trim();
+		username = `${name} ${surname}`;
 		if (username) {
 			socket = io();
-			socket.emit("user-join", username);
+			socket.emit("user-join", {
+				username: username,
+				school: school
+			});
 			socket.on("ready", ()=>{
-				document.write("todo: waiting for quiz");
+				document.write("todo: waiting for quiz (user: "+username);
+				socket.on("next-question", data =>{
+					//handle questions
+				});
 			});
 		}
 	}
-	$("#login").on("click", ()=>{
-		validateUsername();
+	$("#start").on("click", ()=>{
+		register();
 	});
 });
