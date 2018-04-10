@@ -18,9 +18,6 @@ io.on("connection", socket =>{
 	let registered = false;
 	socket.on("user-join", username =>{
 		if(registered) return;
-		if(username.length>25){
-			username = username.slice(0,25);
-		}
 		socket.username = username;
 		users[socket.username+"."+socket.id] = {
 			joined: new Date(), 
@@ -29,8 +26,10 @@ io.on("connection", socket =>{
 			ip: socket.request.connection.remoteAddress,
 			correctAnswers: 0
 		};
-		console.log(`[server] New user: ${users[username+"."+socket.id]}`);
+		console.log(`[server] User connected: ${socket.username}`);
+		console.dir(users);
 		registered = true;
+		socket.emit("ready");
 	});
 	socket.on("user-leave", () => {
 		if(registered){
