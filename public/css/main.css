@@ -33,13 +33,25 @@ body {
     display: grid;
     align-content: center;
     justify-content: center;
+    padding: 0 0.8rem;
 }
 
 .title_page > .title {
     margin: auto;
+    font-family: 'Gugi', cursive;
     text-align: center;
     font-size: 3rem;
     /* -webkit-text-stroke: 0.15rem black; */
+}
+
+.title_page > input, select {
+    margin: 0.5rem 0;
+    padding: 1rem;
+    border: none;
+}
+
+.title_page option {
+    max-width: 90vw;
 }
 
 .title_page > #start {
@@ -50,9 +62,17 @@ body {
     padding: 2rem;
     font-size: 2rem;
     border: none;
-    background: rgb(211, 17, 43);
+    background: rgb(19, 114, 0);
     color: white;
+    border-radius: 0.3rem;
+    border: 0.3rem solid white;
+
+    background: #441b5f;
+
+    opacity: 0.85;
 }
+
+
 
 #videobg{
 	position: fixed;
