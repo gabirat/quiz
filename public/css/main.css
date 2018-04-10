@@ -73,7 +73,7 @@ body {
 }
 
 .questionNo {
-    color: rgb(83, 83, 83);
+    color: rgb(110, 110, 110);
 }
 
 .questionContent {
@@ -92,4 +92,21 @@ body {
     font-size: 2rem;
     padding: 1rem 0;
     background: rgb(4, 143, 39);
+    border-radius: 0.3rem;
+}
+
+#ans0 {
+    background: red;
+}
+
+#ans1 {
+    background: rgb(173, 156, 0);
+}
+
+#ans2 {
+    background: rgb(0, 49, 139);
+}
+
+#ans3 {
+    background: rgb(120, 0, 136);
 }

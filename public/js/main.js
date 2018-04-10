@@ -9,6 +9,13 @@ $(document).ready(function(){
 		let name = stripHTMLTags($("#name").val().trim());
 		let surname = stripHTMLTags($("#surname").val().trim());
 		let school = $("#school").val().trim();
+
+		const QuestionDOM = { //question structure
+			answers: [$("ans0"),$("ans1"),$("ans2"),$("ans3")],
+			content: $(".questionContent")[0],
+			questionNo: $(".questionNo")[0]
+		};
+
 		username = `${name} ${surname}`;
 		if (username) {
 			socket = io();
@@ -18,8 +25,8 @@ $(document).ready(function(){
 			});
 			socket.on("ready", ()=>{
 				document.write("todo: waiting for quiz (user: "+username);
-				socket.on("next-question", data =>{
-					//handle questions
+				socket.on("next-question", data =>{ //writes current question into template TODO: finish it XD
+					QuestionDOM.content.text(data.content);
 				});
 			});
 		}
