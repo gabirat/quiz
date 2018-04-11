@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,11 +13,6 @@
 	<script src="js/socket.io.js"></script>
 	<script src="js/main.js"></script>
     <title>Quiz ZSGóra</title>
-    <style>
-        .title_page {
-            display: none;
-        }
-    </style>
 </head>
 
 <body>
@@ -37,15 +34,19 @@
             Zatwierdź
         </button>
     </div>
-
-    <div class="quiz">
-        <p class="questionNo">Pytanie 1</p>
-        <p class="questionContent">Kim jest Paweł Kinasz?</p>
+	<div class="not-ready" style="display: none">
+		<div class="title">
+			<h4>Oczekiwanie na rozpoczecie...</h4>
+		</div>
+	</div>
+    <div class="quiz" style="display: none">
+        <p class="questionNo">Pytanie X</p>
+        <p class="questionContent">Placeholder</p>
         <ul id="answersList">
-            <li class="answer" id="ans0">Ursus</li>
-            <li class="answer" id="ans1">Ursus</li>
-            <li class="answer" id="ans2">Ursus</li>
-            <li class="answer" id="ans3">Ursus</li>
+            <li class="answer" id="ans0">foo</li>
+            <li class="answer" id="ans1">bar</li>
+            <li class="answer" id="ans2">foo</li>
+            <li class="answer" id="ans3">bar</li>
         </ul>
     </div>
 </body>
