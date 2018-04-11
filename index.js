@@ -14,7 +14,21 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/js", express.static(__dirname+"/node_modules/socket.io-client/dist"));
 app.use("/css", express.static(__dirname+"/css"));
 let users = [];
+const stdin = process.openStdin();
 io.on("connection", socket =>{
+	stdin.addListener("data", function(d) {
+		if(d.toString().trim() === "/start"){
+			socket.emit("ready");
+			//TODO: implement looping over a questions array with timeouts for each question
+			socket.emit("next-question", {
+				content: "Test question 1",
+				answers: [
+					"foo", "bar", "haha", "yes"
+				],
+				questionNo: 1
+			});
+		}
+	});
 	let registered = false;
 	socket.on("user-join", data =>{
 		if(registered) return;
@@ -30,8 +44,7 @@ io.on("connection", socket =>{
 		console.log(`[server] User connected: ${socket.username}`);
 		console.dir(users);
 		registered = true;
-		socket.emit("ready");
-		setInterval(()=>{socket.emit("next-question", "elofaza");}, 300);
+		socket.emit("not-ready");
 	});
 	socket.on("user-leave", () => {
 		if(registered){
