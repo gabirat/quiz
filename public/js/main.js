@@ -1,7 +1,9 @@
 /* eslint-disable no-undef */
+let submit;
 $(document).ready(function(){
 	let socket,
-		username;
+		username,
+		answered = false;
 	function stripHTMLTags (input) {
 		return $("<div/>").text(input).html();
 	}
@@ -30,7 +32,18 @@ $(document).ready(function(){
 			socket.on("ready", ()=>{
 				$($(".not-ready")[0]).hide();
 				$($(".quiz")[0]).show();
-				socket.on("next-question", data =>{ //writes current question into template TODO: finish it XD
+				submit = (n)=>{
+					if(!answered){
+						answered = true;
+						socket.emit("answer", n);
+						for(let o of QuestionDOM.answers){
+							o.css("background", "darkgray");
+						}
+						QuestionDOM.answers[n].css({"background": "white", "color": "black"});
+					}
+				}
+				socket.on("next-question", data =>{
+					answered = false;
 					QuestionDOM.content.text(data.content);
 					for(let i in QuestionDOM.answers){
 						QuestionDOM.answers[i].text(data.answers[i]);
