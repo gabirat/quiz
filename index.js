@@ -5,40 +5,56 @@ const app = express();
 const path = require("path");
 const server = require("http").createServer(app);
 const io = require("socket.io")(server);
+const fs = require("fs");
 const port = config.port;
 /* eslint-disable no-console */
 server.listen(port, ()=>{
 	console.log(`[server] Listening on port ${port}...`);
 });
+
 app.use(express.static(path.join(__dirname, "public")));
 app.use("/js", express.static(__dirname+"/node_modules/socket.io-client/dist"));
 app.use("/css", express.static(__dirname+"/css"));
+
 let users = [];
-const questions = [
-	{
-		content: "Test question 1",
-		answers: [
-			"foo", "bar", "haha", "yes"
-		],
-		correct: 2
-	}
-];
+const questions = JSON.parse(fs.readFileSync("questions_db.json","utf-8"));
 const stdin = process.openStdin();
+const liveBoard = {
+	timeRemaining: 0,
+	noParticipants: 0
+};
+
+let timer;
+let secondsSinceQuizStarted = 0;
+let currentQuestionNo = 0;
+
+function startQuiz() {
+	io.emit("ready");
+	emitQuestion(currentQuestionNo++);
+	timer = setInterval(()=>{
+		secondsSinceQuizStarted++;
+		if(secondsSinceQuizStarted % 20 == 0)
+			emitQuestion(currentQuestionNo++);
+	}, 1000);
+}
+
+function emitQuestion(qNumber) {
+	io.emit("next-question", {
+		content: questions[qNumber].content,
+		answers: questions[qNumber].answers,
+		questionNo: qNumber+1
+	});
+}
+
 stdin.addListener("data", function(d) {
 		if(d.toString().trim() === "/start"){
-			io.emit("ready");
-			//TODO: implement looping over a questions array with timeouts for each question
-			io.emit("next-question", {
-				content: questions[0].content,
-				answers: questions[0].answers,
-				questionNo: 1
-			});
-			
+			startQuiz();
 		}
 		if(d.toString().trim() === "/users"){
 			console.dir(users);
 		}
 	});
+
 io.on("connection", socket =>{
 	let registered = false;
 	let answered = false;
