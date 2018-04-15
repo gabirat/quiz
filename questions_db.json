@@ -8,5 +8,15 @@
             "yes"
         ],
         "correct": 2
+    },
+    {
+        "content": "Test question 2",
+        "answers": [
+            "gitara",
+            "siema",
+            "XD",
+            "paweł"
+        ],
+        "correct": 0
     }
 ]
