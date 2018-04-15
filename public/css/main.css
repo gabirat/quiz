@@ -93,6 +93,7 @@ body {
     padding: 1rem 0;
     background: rgb(4, 143, 39);
     border-radius: 0.3rem;
+    cursor: pointer;
 }
 
 #ans0 {
