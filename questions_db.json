@@ -1,0 +1,12 @@
+[
+    {
+        "content": "Test question 1",
+        "answers": [
+            "foo",
+            "bar",
+            "haha",
+            "yes"
+        ],
+        "correct": 2
+    }
+]
