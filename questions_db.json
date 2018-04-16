@@ -18,5 +18,35 @@
             "paweł"
         ],
         "correct": 0
+    },
+    {
+        "content": "Test question 3",
+        "answers": [
+            "gitara",
+            "siema",
+            "XD",
+            "paweł"
+        ],
+        "correct": 0
+    },
+    {
+        "content": "Test question 4",
+        "answers": [
+            "gitara",
+            "siema",
+            "XD",
+            "paweł"
+        ],
+        "correct": 0
+    },
+    {
+        "content": "Test question 5",
+        "answers": [
+            "gitara",
+            "siema",
+            "XD",
+            "paweł"
+        ],
+        "correct": 0
     }
 ]
