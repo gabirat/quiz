@@ -17,8 +17,9 @@ app.use("/js", express.static(__dirname+"/node_modules/socket.io-client/dist"));
 app.use("/css", express.static(__dirname+"/css"));
 
 let users = [];
-const questions = JSON.parse(fs.readFileSync("questions_db.json","utf-8"));
+const questions = require("./questions_db.json");
 const stdin = process.openStdin();
+let started = false;
 const liveBoard = {
 	timeRemaining: 0,
 	noParticipants: 0
@@ -29,6 +30,7 @@ let secondsSinceQuizStarted = 0;
 let currentQuestionNo = 0;
 
 function startQuiz() {
+	started = true;
 	io.emit("ready");
 	emitQuestion(currentQuestionNo++);
 	timer = setInterval(()=>{
@@ -75,7 +77,10 @@ io.on("connection", socket =>{
 		console.log(`[server] User connected: ${socket.username}`);
 		console.dir(users);
 		registered = true;
-		socket.emit("not-ready");
+		if(!started)
+			socket.emit("not-ready");
+		else
+			socket.emit("already-started");
 	});
 	socket.on("user-leave", () => {
 		if(registered){
