@@ -75,6 +75,12 @@ $(document).ready(function(){
 				}
 				QuestionDOM.questionNo.text(`Pytanie ${data.questionNo}`);
 			});
+
+			socket.on("results", (data) => {
+				$("#first").html(data.ranking[0]);
+				$("#second").html(data.ranking[1]);
+				$("#third").html(data.ranking[2]);
+			});
 		}
 	}
 	$("#start").on("click", ()=>{
