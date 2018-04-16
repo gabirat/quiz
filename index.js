@@ -39,6 +39,9 @@ function startQuiz() {
 }
 
 function emitQuestion(qNumber) {
+	for(let i in users){
+		users[i].answered = false;
+	}
 	io.emit("next-question", {
 		content: questions[qNumber].content,
 		answers: questions[qNumber].answers,
@@ -47,17 +50,16 @@ function emitQuestion(qNumber) {
 }
 
 stdin.addListener("data", function(d) {
-		if(d.toString().trim() === "/start"){
-			startQuiz();
-		}
-		if(d.toString().trim() === "/users"){
-			console.dir(users);
-		}
-	});
+	if(d.toString().trim() === "/start"){
+		startQuiz();
+	}
+	if(d.toString().trim() === "/users"){
+		console.dir(users);
+	}
+});
 
 io.on("connection", socket =>{
 	let registered = false;
-	let answered = false;
 	socket.on("user-join", data =>{
 		if(registered) return;
 		socket.username = data.username;
@@ -67,6 +69,7 @@ io.on("connection", socket =>{
 			id: socket.id,
 			ip: socket.request.connection.remoteAddress,
 			score: 0,
+			answered: false,
 			school: data.school
 		};
 		console.log(`[server] User connected: ${socket.username}`);
@@ -81,13 +84,13 @@ io.on("connection", socket =>{
 		} 
 	});
 	socket.on("answer", n =>{
-		if(!answered){
-			answered = true;
-			if(questions[0].correct == n){
+		if(!users[socket.username+"."+socket.id].answered){
+			users[socket.username+"."+socket.id].answered = true;
+			if(questions[currentQuestionNo-1].correct == n){
 				users[socket.username+"."+socket.id].score++;
 				console.log(`User ${socket.username} submitted the correct answer!`);
 			}
 			else console.log(`User ${socket.username} submitted the wrong answer!`);
 		}
-	})
+	});
 });
