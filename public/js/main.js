@@ -1,5 +1,6 @@
 /* eslint-disable no-undef */
 let submit;
+let lateJoin = false;
 
 $(document).ready(function(){
 	let socket,
@@ -17,7 +18,6 @@ $(document).ready(function(){
 	};
 	
 	function colorfulButtons() {
-		console.log("Chnged colors");
 		QuestionDOM.answers[0].css({"background": "red", "color": "white"});
 		QuestionDOM.answers[1].css({"background": "rgb(173, 156, 0)", "color": "white"});
 		QuestionDOM.answers[2].css({"background": "rgb(0, 49, 139)", "color": "white"});
@@ -36,34 +36,44 @@ $(document).ready(function(){
 				username: username,
 				school: school
 			});
-
+			submit = (n)=>{
+				if(!answered){
+					answered = true;
+					socket.emit("answer", n);
+					for(let o of QuestionDOM.answers){
+						o.css("background", "darkgray");
+					}
+					QuestionDOM.answers[n].css({"background": "white", "color": "black"});
+				}
+			}
 			socket.on("not-ready", ()=>{
 				$($(".title_page")[0]).hide();
 				$($(".not-ready")[0]).show();
 			});
 
+			socket.on("already-started", () => {
+				lateJoin = true;
+				$($(".title_page")[0]).hide();
+				$($(".already-started")[0]).show();
+			});
+
 			socket.on("ready", ()=>{
 				$($(".not-ready")[0]).hide();
 				$($(".quiz")[0]).show();
-				submit = (n)=>{
-					if(!answered){
-						answered = true;
-						socket.emit("answer", n);
-						for(let o of QuestionDOM.answers){
-							o.css("background", "darkgray");
-						}
-						QuestionDOM.answers[n].css({"background": "white", "color": "black"});
-					}
+			});
+
+			socket.on("next-question", data =>{
+				if(lateJoin) {
+					$($(".already-started")[0]).hide();
+					$($(".quiz")[0]).show();
 				}
-				socket.on("next-question", data =>{
-					colorfulButtons();
-					answered = false;
-					QuestionDOM.content.text(data.content);
-					for(let i in QuestionDOM.answers){
-						QuestionDOM.answers[i].text(data.answers[i]);
-					}
-					QuestionDOM.questionNo.text(`Pytanie ${data.questionNo}`);
-				});
+				colorfulButtons();
+				answered = false;
+				QuestionDOM.content.text(data.content);
+				for(let i in QuestionDOM.answers){
+					QuestionDOM.answers[i].text(data.answers[i]);
+				}
+				QuestionDOM.questionNo.text(`Pytanie ${data.questionNo}`);
 			});
 		}
 	}
