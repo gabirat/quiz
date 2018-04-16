@@ -111,3 +111,27 @@ body {
 #ans3 {
     background: rgb(120, 0, 136);
 }
+
+#results-page p {
+    margin: 2rem 1rem;
+}
+
+#results-page {
+    text-align: center;
+    font-family: 'Gugi', cursive;
+}
+
+.first {
+    color: gold;
+    font-size: 3rem;
+}
+
+.second {
+    color: silver;
+    font-size: 2rem;
+}
+
+.third {
+    color: rgb(128, 68, 0);
+    font-size: 2rem;
+}
