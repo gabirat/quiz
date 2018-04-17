@@ -35,7 +35,7 @@ function startQuiz() {
 				score: users[i].score
 			});
 		}
-		users.sort((a,b)=>{
+		u.sort((a,b)=>{
 			return b.score-a.score;
 		});
 		io.emit("live-update", {
