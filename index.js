@@ -5,7 +5,6 @@ const app = express();
 const path = require("path");
 const server = require("http").createServer(app);
 const io = require("socket.io")(server);
-const fs = require("fs");
 const port = config.port;
 /* eslint-disable no-console */
 server.listen(port, ()=>{
@@ -24,7 +23,6 @@ const liveBoard = {
 	timeRemaining: 0,
 	noParticipants: 0
 };
-
 let timer;
 let secondsSinceQuizStarted = 0;
 let currentQuestionNo = 0;
