@@ -13,10 +13,13 @@ $(document).ready(function(){
 			QuestionDOM.answers[i].text(data.question.answers[i]);
 		}
 		QuestionDOM.questionNo.text(`Pytanie ${data.question.questionNo}`);
-		let participants = "";
+		data.participants.sort((a,b)=>{
+			return b.score-a.score;
+		});
+		let participants = [];
 		for(let i in data.participants){
-			participants+=`<li>${data.participants[i].username} : ${data.participants[i].score} punktów</li>`;
+			participants.push(`<li>${data.participants[i].username} : ${data.participants[i].score} punktów</li>`);
 		}
-		QuestionDOM.participants.html(participants);
+		QuestionDOM.participants.html(participants.join(""));
 	});
 });
