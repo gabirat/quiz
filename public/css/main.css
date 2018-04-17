@@ -66,6 +66,7 @@ body {
 
 .quiz {
     text-align: center;
+    padding: 0.5rem;
 }
 
 .quiz > p {
