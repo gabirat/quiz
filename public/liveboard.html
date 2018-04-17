@@ -5,17 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Gugi" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Gugi" rel="stylesheet">
+	<script
+	src="https://code.jquery.com/jquery-3.3.1.min.js"
+	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	crossorigin="anonymous"></script>
+	<script src="js/socket.io.js"></script>
+	<script src="js/live.js"></script>
     <title>Quiz ZSGóra - Liveboard</title>
 </head>
 <body>
     <div class="liveboard">
-        <div id="question"></div>
+		<p class="questionNo">Pytanie X</p>
+        <p class="questionContent">Placeholder</p>
         <div id="ans0"></div>
         <div id="ans1"></div>
         <div id="ans2"></div>
         <div id="ans3"></div>
-        <div id="participants"></div>
+        <ul id="participants"></ul>
     </div>
 </body>
 </html>
