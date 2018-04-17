@@ -77,9 +77,11 @@ $(document).ready(function(){
 			});
 
 			socket.on("results", (data) => {
-				$("#first").html(`${data.ranking[0].username} : ${data.ranking[0].username}`);
-				$("#second").html(`${data.ranking[1].username} : ${data.ranking[1].username}`);
-				$("#third").html(`${data.ranking[2].username} : ${data.ranking[2].username}`);
+				$($(".quiz")[0]).hide();
+				$("#results-page").show();
+				$("#first").html(`${data.ranking[0].username} : ${data.ranking[0].score}`);
+				if(data.ranking[1]) $("#second").html(`${data.ranking[1].username} : ${data.ranking[1].score}`);
+				if(data.ranking[2]) $("#third").html(`${data.ranking[2].username} : ${data.ranking[2].score}`);
 			});
 		}
 	}
