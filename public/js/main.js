@@ -45,7 +45,7 @@ $(document).ready(function(){
 					}
 					QuestionDOM.answers[n].css({"background": "white", "color": "black"});
 				}
-			}
+			};
 			socket.on("not-ready", ()=>{
 				$($(".title_page")[0]).hide();
 				$($(".not-ready")[0]).show();

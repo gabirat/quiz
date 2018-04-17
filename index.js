@@ -33,11 +33,29 @@ function startQuiz() {
 	started = true;
 	io.emit("ready");
 	emitQuestion(currentQuestionNo++);
+	updateTimer = setInterval(()=>{
+		let u = [];
+		for(let i in users){
+			u.push({
+				username: users[i].username,
+				score: users[i].score
+			});
+		}
+		io.emit("live-update", {
+			question: {
+				content: questions[currentQuestionNo-1].content,
+				answers: questions[currentQuestionNo-1].answers,
+				questionNo: currentQuestionNo
+			},
+			participants: [...u]
+		});
+	}, 1000);
 	timer = setInterval(()=>{
 		secondsSinceQuizStarted++;
 		if(secondsSinceQuizStarted % Number(config.timeToAnswer) == 0){
 			if(currentQuestionNo === questions.length){
 				clearInterval(timer);
+				clearInterval(updateTimer);
 				let ranking = [];
 				for(let i in users) ranking.push({username: users[i].username, score: users[i].score});
 				ranking.sort(function(a,b){
