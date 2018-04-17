@@ -77,9 +77,9 @@ $(document).ready(function(){
 			});
 
 			socket.on("results", (data) => {
-				$("#first").html(data.ranking[0]);
-				$("#second").html(data.ranking[1]);
-				$("#third").html(data.ranking[2]);
+				$("#first").html(`${data.ranking[0].username} : ${data.ranking[0].username}`);
+				$("#second").html(`${data.ranking[1].username} : ${data.ranking[1].username}`);
+				$("#third").html(`${data.ranking[2].username} : ${data.ranking[2].username}`);
 			});
 		}
 	}

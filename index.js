@@ -35,8 +35,21 @@ function startQuiz() {
 	emitQuestion(currentQuestionNo++);
 	timer = setInterval(()=>{
 		secondsSinceQuizStarted++;
-		if(secondsSinceQuizStarted % 20 == 0)
-			emitQuestion(currentQuestionNo++);
+		if(secondsSinceQuizStarted % Number(config.timeToAnswer) == 0){
+			if(currentQuestionNo === questions.length){
+				clearInterval(timer);
+				let ranking = [];
+				for(let i in users) ranking.push({username: users[i].username, score: users[i].score});
+				ranking.sort(function(a,b){
+					return b.score-a.score;
+				});
+				console.log(ranking);
+				io.emit("results", {
+					ranking: ranking
+				});
+			}
+			else emitQuestion(currentQuestionNo++);
+		}
 	}, 1000);
 }
 
