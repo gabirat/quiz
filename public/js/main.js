@@ -1,7 +1,8 @@
 /* eslint-disable no-undef */
 let submit;
 let lateJoin = false;
-
+let timer;
+let time = 15;
 $(document).ready(function(){
 	let socket,
 		username,
@@ -23,7 +24,7 @@ $(document).ready(function(){
 		QuestionDOM.answers[2].css({"background": "rgb(0, 49, 139)", "color": "white"});
 		QuestionDOM.answers[3].css({"background": "rgb(120, 0, 136)", "color": "white"});
 	}
-
+	
 	function register () {
 		let name = stripHTMLTags($("#name").val().trim());
 		let surname = stripHTMLTags($("#surname").val().trim());
@@ -63,6 +64,8 @@ $(document).ready(function(){
 			});
 
 			socket.on("next-question", data =>{
+				time = 15;
+				clearInterval(timer);
 				if(lateJoin) {
 					$($(".already-started")[0]).hide();
 					$($(".quiz")[0]).show();
@@ -74,6 +77,10 @@ $(document).ready(function(){
 					QuestionDOM.answers[i].text(data.answers[i]);
 				}
 				QuestionDOM.questionNo.text(`Pytanie ${data.questionNo}`);
+				$("#timer").html(time--);
+				timer = setInterval(()=>{
+					$("#timer").html(time--);
+				}, 1000);
 			});
 
 			socket.on("results", (data) => {

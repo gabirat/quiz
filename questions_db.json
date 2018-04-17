@@ -1,61 +1,61 @@
 [{
-    "content": "1. Kto jest obecnym dyrektorem Zespołu Szkół w Górze?",
+    "content": "Kto jest obecnym dyrektorem Zespołu Szkół w Górze?",
     "answers": ["mgr Bartłomiej Hebel", "mgr inż. Ewa Gano", "dr hab. mgr inż. Sara Bielecka", "mgr Paweł Kinasz"],
     "correct": 1
 }, {
-    "content": "2. Jak obecnie nazywa się szkoła zawodowa?",
-    "answers": ["szkoła ogólnokształcąca", "szkoła kształcenia ustawicznego", "szkoła branżowa stopnia", "szkoła techniczna"],
+    "content": "Jak obecnie nazywa się szkoła zawodowa?",
+    "answers": ["szkoła ogólnokształcąca", "szkoła kształcenia ustawicznego", "szkoła branżowa I stopnia", "szkoła techniczna"],
     "correct": 2
 }, {
-    "content": "3.Kto jest patronem Zespołu Szkół w Górze?",
+    "content": "Kto jest patronem Zespołu Szkół w Górze?",
     "answers": ["Maria Skłodowska-Curie", "Gabriel Ratajczak", "gen. Sylwester Kaliski", "Adam Mickiewicz"],
     "correct": 2
 }, {
-    "content": "4.W ilu zawodach nasza szkoła kształci techników: ",
+    "content": "W ilu zawodach nasza szkoła kształci techników: ",
     "answers": ["W 10", "W 8", "W 12", "W 5"],
     "correct": 0
 }, {
-    "content": "5.W jakich zawodach szkoła kształci młodocianych pracowników? ",
+    "content": "W jakich zawodach szkoła kształci młodocianych pracowników? ",
     "answers": ["sprzedawca, mechanik pojazdów samochodowych, magazynier-logistyk", "sprzedawca, aktor, policjant", "lekarz, polityk, ksiądz", "murarz, tynkarz, akrobata"],
     "correct": 0
 }, {
-    "content": "6. W jakim terminie kandydat do szkoły ponadgimnazjalnej składa podanie?",
-    "answers": ["Od  1 do 22 czerwca 2018 r.", "Do 1 września 2018 r.", "Od  1 stycznia do 31 grudnia 2018 r.", "Od  26 czerwca do 1 września 2018 r."],
+    "content": "W jakim terminie kandydat do szkoły ponadgimnazjalnej składa podanie?",
+    "answers": ["Od 1 do 22 czerwca 2018 r.", "Do 1 września 2018 r.", "Od 1 stycznia do 31 grudnia 2018 r.", "Od 26 czerwca do 1 września 2018 r."],
     "correct": 0
 }, {
-    "content": "7. Jakie są warunki ukończenia szkoły z tytułem technika?",
+    "content": "Jakie są warunki ukończenia szkoły z tytułem technika?",
     "answers": ["ukończenie szkoły ponadgimnazjalnej oraz zdanie wszystkich egzaminów zawodowych", "ukończenie szkoły ponadgimnazjalnej oraz zdanie matury", "zdanie jednego z wymaganych egzaminów zawodowych", "ukończenie szkoły ponadgimnazjalnej z ocenami bardzo dobrymi z przedmiotów zawodowych"],
     "correct": 0
 }, {
-    "content": "8. Czy po ukończeniu technikum można iść na studia?",
+    "content": "Czy po ukończeniu technikum można iść na studia?",
     "answers": ["Tak, każda osoba, która ukończyła technikum i zdała maturę może iść na studia", "Nie, na studia można iść tylko po ukończeniu liceum", "Tak, na studia można iść bez matury, po ukończeniu technikum", "Nie, na studia można iść tylko po ukończeniu liceum i zdania matury"],
     "correct": 0
 }, {
-    "content": "9. Ile trwa nauka w technikum?",
+    "content": "Ile trwa nauka w technikum?",
     "answers": ["4 lata", "3 lata", "5 lat", "2 lata"],
     "correct": 0
 }, {
-    "content": "10. Ile trwa nauka w szkole branżowej I stopnia?",
+    "content": "Ile trwa nauka w szkole branżowej I stopnia?",
     "answers": ["2 lata", "4 lata", "3 lata", "5 lat"],
     "correct": 2
 }, {
-    "content": "11. Kiedy następuje ogłoszenie listy kandydatów przyjętych do szkoły?",
+    "content": "Kiedy następuje ogłoszenie listy kandydatów przyjętych do szkoły?",
     "answers": ["26 lipca 2018 r.", "20 sierpnia 2018 r.", "1 września 2018 r.", "24 czerwca 2018 r."],
     "correct": 0
 }, {
-    "content": "12. Czy należy podawać swoje hasła do portali społecznościowych swoim przyjaciołom, znajomym lub obcym ludziom?",
+    "content": "Czy należy podawać swoje hasła do portali społecznościowych swoim przyjaciołom, znajomym lub obcym ludziom?",
     "answers": ["Zdecydowanie tak, jesli dobrze ich znasz", "Tak, jeśli o to proszą", "Nie, nie należy tego robić", "Zależy od sytuacji"],
     "correct": 2
 }, {
-    "content": "13. Czy korzystając z internetu jesteś anonimowy?",
+    "content": "Czy korzystając z internetu jesteś anonimowy?",
     "answers": ["Tak, przecież na każdej stronie mam inny nick", "Tak, nikt nie wie kto siedzi po drugiej stronie", "Nie, aby odkryć czyjąś tożsamość wystarczy mieć Jego adres IP", "Tak, ponieważ używam antywirusa"],
     "correct": 2
 }, {
-    "content": "14. Czy bez względu na to kto jest nadawcą zawsze należy otwierać e-maile i dołączone do nich załączniki?",
+    "content": "Czy bez względu na to kto jest nadawcą zawsze należy otwierać e-maile i dołączone do nich załączniki?",
     "answers": ["Tak, ponieważ na pewno to coś ważnego skoro ktoś wysłał go właśnie do mnie", "Nie, ponieważ w załącznikach może być ukryte złośliwe oprogramowanie", "Tak, bo może to konkurs na darmową grę na Steamie", "Tak, bo nie można się doszukiwać we wszystkim niebezpieczeństwa"],
     "correct": 1
 }, {
-    "content": "15.Czy należy logować się do każdej otwartej sieci WIFI?",
+    "content": "Czy należy logować się do każdej otwartej sieci WIFI?",
     "answers": ["Tak, przecież trzeba korzystać póki jest", "Tak, darmowy internet i darmowe jedzenie to to, co lubię najbardziej", "Nie, gdyż jest to niebezpieczne", "Tak, ponieważ każdy tak robi"],
     "correct": 2
 }]
