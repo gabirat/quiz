@@ -19,10 +19,6 @@ let users = [];
 const questions = require("./questions_db.json");
 const stdin = process.openStdin();
 let started = false;
-const liveBoard = {
-	timeRemaining: 0,
-	noParticipants: 0
-};
 let timer;
 let secondsSinceQuizStarted = 0;
 let currentQuestionNo = 0;
@@ -39,6 +35,9 @@ function startQuiz() {
 				score: users[i].score
 			});
 		}
+		users.sort((a,b)=>{
+			return b.score-a.score;
+		});
 		io.emit("live-update", {
 			question: {
 				content: questions[currentQuestionNo-1].content,
