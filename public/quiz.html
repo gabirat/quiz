@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/main.css">
-	<link href="https://fonts.googleapis.com/css?family=Gugi" rel="stylesheet">
-	<script
-	src="https://code.jquery.com/jquery-3.3.1.min.js"
-	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-	crossorigin="anonymous"></script>
-	<script src="js/socket.io.js"></script>
-	<script src="js/main.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Gugi" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="js/socket.io.js"></script>
+    <script src="js/main.js"></script>
     <title>Quiz ZSGóra</title>
 </head>
 
@@ -34,18 +33,21 @@
             Zatwierdź
         </button>
     </div>
-	<div class="not-ready" style="display: none">
-		<div class="title">
-			<h4>Oczekiwanie na rozpoczecie...</h4>
-		</div>
+    <div class="not-ready" style="display: none">
+        <div class="title">
+            <h4>Oczekiwanie na rozpoczecie...</h4>
+        </div>
     </div>
     <div class="already-started" style="display: none">
-		<div class="title">
-			<h4>Oczekiwanie na następne pytanie...</h4>
-		</div>
-	</div>
+        <div class="title">
+            <h4>Oczekiwanie na następne pytanie...</h4>
+        </div>
+    </div>
     <div class="quiz" style="display: none">
-		Pozostaly czas: <div id="timer"></div>
+        <div id="timer_wrap">
+            Pozostaly czas:
+            <div id="timer"></div>
+        </div>
         <p class="questionNo">Pytanie X</p>
         <p class="questionContent">Placeholder</p>
         <ul id="answersList">
@@ -56,12 +58,12 @@
         </ul>
     </div>
     <div id="results-page" style="display: none">
-		<p class="first">Pierwsze miejsce</p>
-		<span id="first"></span>
-		<p class="second">Drugie miejsce</p>
-		<span id="second"></span>
-		<p class="third">Trzecie miejsce</p>
-		<span id="third"></span>
+        <p class="first">Pierwsze miejsce</p>
+        <span id="first"></span>
+        <p class="second">Drugie miejsce</p>
+        <span id="second"></span>
+        <p class="third">Trzecie miejsce</p>
+        <span id="third"></span>
     </div>
 </body>
 
