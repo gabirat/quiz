@@ -32,7 +32,7 @@ body {
     margin: auto;
     font-family: 'Gugi', cursive;
     text-align: center;
-    font-size: 3rem;
+    font-size: 2.2rem;
     /* -webkit-text-stroke: 0.15rem black; */
 }
 
@@ -67,6 +67,7 @@ body {
 .quiz {
     text-align: center;
     padding: 0.5rem;
+    position: relative;
 }
 
 .quiz > p {
@@ -79,7 +80,7 @@ body {
 
 .questionContent {
     font-family: 'Gugi', cursive;
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 #answersList {
@@ -90,7 +91,7 @@ body {
 .answer {
     list-style: none;
     margin-top: 1rem;
-    font-size: 2rem;
+    font-size: 0.8rem;
     padding: 1rem 0;
     background: rgb(4, 143, 39);
     border-radius: 0.3rem;
@@ -136,3 +137,6 @@ body {
     color: rgb(128, 68, 0);
     font-size: 2rem;
 }
+
+/* #timer_wrap {
+} */
