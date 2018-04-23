@@ -110,7 +110,7 @@ io.on("connection", socket =>{
 		else
 			socket.emit("already-started");
 	});
-	socket.on("user-leave", () => {
+	socket.on("disconnect", () => {
 		if(registered){
 			delete users[socket.id];
 			console.log(`[server] User disconnected: ${socket.username}`);
