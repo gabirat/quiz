@@ -2,7 +2,7 @@
 let submit;
 let lateJoin = false;
 let timer;
-let time = 15;
+let time = 20;
 $(document).ready(function(){
 	let socket,
 		username,
