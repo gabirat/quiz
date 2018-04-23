@@ -59,18 +59,17 @@ function startQuiz() {
 				ranking.sort(function(a,b){
 					return b.score-a.score;
 				});
-				console.log(ranking);
 				io.emit("results", {
 					ranking: ranking
 				});
 				let top3 = ranking.slice(0,3);
 				for(let i in top3){
 					let c = hash.generate(top3[i].id);
-					console.log(c);
 					io.to(top3[i].id).emit("winner", {
-						place: (i+1),
+						place: Number(i)+Number(1),
 						code: c
 					});
+					console.log(`#${Number(i)+Number(1)}: ${users[top3[i].id].username} (hash: ${c})`);
 				}
 			}
 			else emitQuestion(currentQuestionNo++);
