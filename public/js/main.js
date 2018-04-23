@@ -92,17 +92,17 @@ $(document).ready(function(){
 			socket.on("winner", data =>{
 				$("#results-page").hide();
 				if(data.place == 1) {
-					$(body).addClass("gold");
+					$("body").addClass("gold");
 					$("#win-first").show();
 					$($("#win-first > .secretHash")[0]).html(`Twój kod wygranej: ${data.code}`)
 				}
 				if(data.place == 2) {
-					$(body).addClass("silver");
+					$("body").addClass("silver");
 					$("#win-second").show();
 					$($("#win-second > .secretHash")[0]).html(`Twój kod wygranej: ${data.code}`)
 				}
 				if(data.place == 3) {
-					$(body).addClass("bronze");
+					$("body").addClass("bronze");
 					$("#win-third").show();
 					$($("#win-third > .secretHash")[0]).html(`Twój kod wygranej: ${data.code}`)
 				}
