@@ -1,0 +1,13 @@
+[{
+    "content": "Kto jest obecnym dyrektorem Zespołu Szkół w Górze?",
+    "answers": ["mgr Bartłomiej Hebel", "mgr inż. Ewa Gano", "dr hab. mgr inż. Sara Bielecka", "mgr Paweł Kinasz"],
+    "correct": 1
+}, {
+    "content": "Jak obecnie nazywa się szkoła zawodowa?",
+    "answers": ["szkoła ogólnokształcąca", "szkoła kształcenia ustawicznego", "szkoła branżowa I stopnia", "szkoła techniczna"],
+    "correct": 2
+}, {
+    "content": "Kto jest patronem Zespołu Szkół w Górze?",
+    "answers": ["Maria Skłodowska-Curie", "Gabriel Ratajczak", "gen. Sylwester Kaliski", "Adam Mickiewicz"],
+    "correct": 2
+}]
