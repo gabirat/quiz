@@ -101,7 +101,7 @@ $(document).ready(function(){
 				}
 				if(data.place == 3) {
 					$("#win-third").show();
-					$($("#win-second > .secretHash")[0]).html(`Twój kod wygranej: ${data.code}`)
+					$($("#win-third > .secretHash")[0]).html(`Twój kod wygranej: ${data.code}`)
 				}
 			});
 		}
