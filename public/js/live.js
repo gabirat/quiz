@@ -5,7 +5,7 @@ $(document).ready(function(){
 		answers: [$("#ans0"),$("#ans1"),$("#ans2"),$("#ans3")],
 		content: $($(".questionContent")[0]),
 		questionNo: $($(".questionNo")[0]),
-		participants: $("#participants")
+		participants: $("#participants-users")
 	};
 	socket.on("live-update", (data)=>{
 		QuestionDOM.content.text(data.question.content);
