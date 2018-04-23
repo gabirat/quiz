@@ -64,7 +64,7 @@ $(document).ready(function(){
 			});
 
 			socket.on("next-question", data =>{
-				time = 15;
+				time = 20;
 				clearInterval(timer);
 				if(lateJoin) {
 					$($(".already-started")[0]).hide();
