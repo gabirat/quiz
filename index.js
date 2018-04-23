@@ -69,7 +69,7 @@ function startQuiz() {
 						place: Number(i)+Number(1),
 						code: c
 					});
-					console.log(`#${Number(i)+Number(1)}: ${users[top3[i].id].username} (hash: ${c})`);
+					console.log(`[quiz] #${Number(i)+Number(1)}: ${users[top3[i].id].username} (hash: ${c})`);
 				}
 			}
 			else emitQuestion(currentQuestionNo++);
@@ -130,9 +130,9 @@ io.on("connection", socket =>{
 			users[socket.id].answered = true;
 			if(questions[currentQuestionNo-1].correct == n){
 				users[socket.id].score++;
-				console.log(`User ${socket.username} submitted the correct answer!`);
+				console.log(`[quiz] User ${socket.username} submitted the correct answer!`);
 			}
-			else console.log(`User ${socket.username} submitted the wrong answer!`);
+			else console.log(`[quiz] User ${socket.username} submitted the wrong answer!`);
 		}
 	});
 });
