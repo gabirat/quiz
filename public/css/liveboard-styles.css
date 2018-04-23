@@ -61,7 +61,7 @@ body {
 
 .questionContent {
     grid-area: questionContent;
-    font-family: 'Gugi', cursive;
+    font-family: 'Raleway', sans-serif;
     font-size: 3rem;
 }
 
