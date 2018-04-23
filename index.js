@@ -117,7 +117,7 @@ io.on("connection", socket =>{
 		} 
 	});
 	socket.on("answer", n =>{
-		if(!users[socket.id].answered){
+		if(users[socket.id] && !users[socket.id].answered){
 			users[socket.id].answered = true;
 			if(questions[currentQuestionNo-1].correct == n){
 				users[socket.id].score++;
