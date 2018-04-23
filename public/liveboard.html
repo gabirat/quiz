@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/liveboard-styles.css">
-	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-	<script
-	src="https://code.jquery.com/jquery-3.3.1.min.js"
-	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-	crossorigin="anonymous"></script>
-	<script src="js/socket.io.js"></script>
-	<script src="js/live.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="js/socket.io.js"></script>
+    <script src="js/live.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <title>Quiz ZSGóra - Liveboard</title>
 </head>
+
 <body>
     <div class="liveboard">
-		<div class="questionNo">Pytanie X</div>
+        <div class="questionNo">Pytanie X</div>
         <div class="questionContent">Placeholder</div>
         <div class="answer" id="ans0">To jest testowa odp</div>
         <div class="answer" id="ans1">To jest testowa odp</div>
@@ -27,13 +28,20 @@
             <div id="participants-users"></div>
         </div>
     </div>
-    <div id="results-page" style="display: none">
-        <p class="first">Pierwsze miejsce</p>
-        <span id="first"></span>
-        <p class="second">Drugie miejsce</p>
-        <span id="second"></span>
-        <p class="third">Trzecie miejsce</p>
-        <span id="third"></span>
+    <div id="results-page">
+        <div class="first">
+            <i class="fas fa-trophy"></i>
+            <span id="first">Paweł Kinasz</span>
+        </div>
+        <div class="second">
+            <i class="fas fa-trophy"></i>
+            <span id="second">Jan Kowalski</span>
+        </div>
+        <div class="third">
+            <i class="fas fa-trophy"></i>
+            <span id="third">Twoja MaT K</span>
+        </div>
     </div>
 </body>
+
 </html>

@@ -101,3 +101,27 @@ body {
     margin-top: 0.25;
 
 }
+
+#results-page {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 1rem;
+    align-items: center;
+    padding: 2rem;
+}
+
+.first {
+    color: gold;
+    font-size: 10rem;
+}
+
+.second {
+    color: silver;
+    font-size: 6.18rem;
+}
+
+.third {
+    color: rgb(128, 68, 0);
+    font-size: 6.18rem;
+}
