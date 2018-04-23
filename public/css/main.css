@@ -1,6 +1,13 @@
 *, ::before, ::after {
     box-sizing: border-box;
     transition: all 0.3s ease-in-out;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
 }
 
 ::selection {
@@ -138,5 +145,26 @@ body {
     font-size: 2rem;
 }
 
-/* #timer_wrap {
-} */
+.winners {
+    text-align: center;
+}
+
+.winners .congrats{
+    font-size: 1.5rem;
+}
+
+.winners svg {
+    font-size: 12rem;
+}
+
+#win-first svg {
+    color: gold;
+}
+
+#win-second svg {
+    color: silver;
+}
+
+#win-third svg {
+    color: darkorange;
+}
