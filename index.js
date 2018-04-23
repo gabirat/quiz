@@ -22,6 +22,7 @@ let started = false;
 let timer;
 let secondsSinceQuizStarted = 0;
 let currentQuestionNo = 0;
+let codes = [];
 
 function startQuiz() {
 	started = true;
@@ -54,7 +55,7 @@ function startQuiz() {
 				clearInterval(timer);
 				clearInterval(updateTimer);
 				let ranking = [];
-				for(let i in users) ranking.push({username: users[i].username, score: users[i].score});
+				for(let i in users) ranking.push({username: users[i].username, id: users[i].id, score: users[i].score});
 				ranking.sort(function(a,b){
 					return b.score-a.score;
 				});
@@ -62,6 +63,14 @@ function startQuiz() {
 				io.emit("results", {
 					ranking: ranking
 				});
+				let top3 = ranking.slice(0,3);
+				for(let i=0; i<3; i++) codes[i] = "foo"; //insert a hash function here
+				for(let i in top3){
+					io.to(top3[i].id).emit("winner", {
+						place: (i+1),
+						code: codes[i]
+					});
+				}
 			}
 			else emitQuestion(currentQuestionNo++);
 		}

@@ -96,6 +96,9 @@ $(document).ready(function(){
 				if(data.ranking[1]) $("#second").html(`${data.ranking[1].username} : ${data.ranking[1].score}`);
 				if(data.ranking[2]) $("#third").html(`${data.ranking[2].username} : ${data.ranking[2].score}`);
 			});
+			socket.on("winner", data =>{
+				//show winner div
+			});
 		}
 	}
 	$("#start").on("click", ()=>{
