@@ -5,6 +5,7 @@ const app = express();
 const path = require("path");
 const server = require("http").createServer(app);
 const io = require("socket.io")(server);
+const hash = require("password-hash");
 const port = config.port;
 /* eslint-disable no-console */
 server.listen(port, ()=>{
@@ -22,7 +23,6 @@ let started = false;
 let timer;
 let secondsSinceQuizStarted = 0;
 let currentQuestionNo = 0;
-let codes = [];
 
 function startQuiz() {
 	started = true;
@@ -64,11 +64,12 @@ function startQuiz() {
 					ranking: ranking
 				});
 				let top3 = ranking.slice(0,3);
-				for(let i=0; i<3; i++) codes[i] = "foo"; //insert a hash function here
 				for(let i in top3){
+					let c = hash.generate(top3[i].id);
+					console.log(c);
 					io.to(top3[i].id).emit("winner", {
 						place: (i+1),
-						code: codes[i]
+						code: c
 					});
 				}
 			}
