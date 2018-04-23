@@ -3,13 +3,6 @@ let submit;
 let lateJoin = false;
 let timer;
 let time = 20;
-let colors = new Map([[
-	"bronze", "rgb(128, 68, 0)"
-],[
-	"silver", "silver"
-],[
-	"gold", "gold"
-]]);
 $(document).ready(function(){
 	let socket,
 		username,
@@ -97,7 +90,19 @@ $(document).ready(function(){
 				if(data.ranking[2]) $("#third").html(`${data.ranking[2].username} : ${data.ranking[2].score}`);
 			});
 			socket.on("winner", data =>{
-				//show winner div
+				$("#results-page").hide();
+				if(data.place == 1) {
+					$("#win-first").show();
+					$($("#win-first > .secretHash")[0]).html(`Twój kod wygranej: ${data.code}`)
+				}
+				if(data.place == 2) {
+					$("#win-second").show();
+					$($("#win-second > .secretHash")[0]).html(`Twój kod wygranej: ${data.code}`)
+				}
+				if(data.place == 3) {
+					$("#win-third").show();
+					$($("#win-second > .secretHash")[0]).html(`Twój kod wygranej: ${data.code}`)
+				}
 			});
 		}
 	}
