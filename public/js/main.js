@@ -3,6 +3,13 @@ let submit;
 let lateJoin = false;
 let timer;
 let time = 20;
+let colors = new Map([[
+	"bronze", "rgb(128, 68, 0)"
+],[
+	"silver", "silver"
+],[
+	"gold", "gold"
+]]);
 $(document).ready(function(){
 	let socket,
 		username,
@@ -82,7 +89,6 @@ $(document).ready(function(){
 					$("#timer").html(time--);
 				}, 1000);
 			});
-
 			socket.on("results", (data) => {
 				$($(".quiz")[0]).hide();
 				$("#results-page").show();
