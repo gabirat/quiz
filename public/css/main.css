@@ -17,7 +17,8 @@
 body {
     margin: 0;
     padding: 0;
-    background: url("../poster.jpg");
+    background-image: url("../poster.jpg");
+    background-blend-mode: screen;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
     display: grid;
@@ -167,4 +168,14 @@ body {
 
 #win-third svg {
     color: darkorange;
+}
+
+.gold {
+    background-color: #ffd70080; 
+}
+.silver {
+    background-color: #c0c0c080; 
+}
+.bronze {
+    background-color: #ff8c0080; 
 }
