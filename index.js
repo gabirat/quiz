@@ -93,7 +93,7 @@ io.on("connection", socket =>{
 	socket.on("user-join", data =>{
 		if(registered) return;
 		socket.username = data.username;
-		users[socket.username+"."+socket.id] = {
+		users[socket.id] = {
 			joined: new Date(), 
 			username: socket.username,
 			id: socket.id,
@@ -112,15 +112,15 @@ io.on("connection", socket =>{
 	});
 	socket.on("user-leave", () => {
 		if(registered){
-			delete users[socket.username+"."+socket.id];
+			delete users[socket.id];
 			console.log(`[server] User disconnected: ${socket.username}`);
 		} 
 	});
 	socket.on("answer", n =>{
-		if(!users[socket.username+"."+socket.id].answered){
-			users[socket.username+"."+socket.id].answered = true;
+		if(!users[socket.id].answered){
+			users[socket.id].answered = true;
 			if(questions[currentQuestionNo-1].correct == n){
-				users[socket.username+"."+socket.id].score++;
+				users[socket.id].score++;
 				console.log(`User ${socket.username} submitted the correct answer!`);
 			}
 			else console.log(`User ${socket.username} submitted the wrong answer!`);
