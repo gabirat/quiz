@@ -7,6 +7,7 @@ $(document).ready(function(){
 	let socket,
 		username,
 		answered = false;
+	let locked = false;
 
 	function stripHTMLTags (input) {
 		return $("<div/>").text(input).html();
@@ -31,7 +32,8 @@ $(document).ready(function(){
 		let school = $("#school").val().trim();
 
 		username = `${name} ${surname}`;
-		if (username) {
+		if (username && !locked) {
+			locked = true;
 			socket = io();
 			socket.emit("user-join", {
 				username: username,
