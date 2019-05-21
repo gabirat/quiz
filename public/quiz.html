@@ -7,8 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Gugi" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="js/socket.io.js"></script>
     <script src="js/main.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
@@ -32,7 +32,11 @@
             <option value="zsNiechlow">ZS w Niechlowie</option>
             <option value="other">Inna</option>
         </select>
-
+        <label>
+            <input type="checkbox" id="gdpr">
+            Zgadzam się na przetwarzanie podanych danych oraz wyświetlenie ich na tablicy wyników
+        </label>
+        <br>
         <button id="start">
             Zatwierdź
         </button>
@@ -64,10 +68,10 @@
     <div id="results-page" style="display: none">
         <p class="first">Pierwsze miejsce</p>
         <span id="first"></span>
-        <p class="second">Drugie miejsce</p>
+        <!-- <p class="second">Drugie miejsce</p>
         <span id="second"></span>
         <p class="third">Trzecie miejsce</p>
-        <span id="third"></span>
+        <span id="third"></span> -->
     </div>
 
     <div id="win-first" class="winners" style="display: none">
