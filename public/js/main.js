@@ -26,10 +26,6 @@ $(document).ready(function () {
 		QuestionDOM.answers[3].css({ "background": "rgb(120, 0, 136)", "color": "white" });
 	}
 
-	socket.on("config", (cfg) => {
-		time = cfg.timeToAnswer;
-	});
-
 	function register() {
 		let name = stripHTMLTags($("#name").val().trim());
 		let surname = stripHTMLTags($("#surname").val().trim());
@@ -67,6 +63,10 @@ $(document).ready(function () {
 			socket.on("ready", () => {
 				$($(".not-ready")[0]).hide();
 				$($(".quiz")[0]).show();
+			});
+
+			socket.on("config", (cfg) => {
+				time = cfg.timeToAnswer;
 			});
 
 			socket.on("next-question", data => {
