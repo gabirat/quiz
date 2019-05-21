@@ -112,6 +112,11 @@ $(document).ready(function(){
 		}
 	}
 	$("#start").on("click", ()=>{
-		register();
+		if($("#gdpr").prop("checked") && $("#name").val() && $("#surname").val()) {
+			register();
+		}
+		else {
+			alert("Wypełnij wszystkie pola!");
+		}	
 	});
 });
