@@ -2,7 +2,8 @@
 let submit;
 let lateJoin = false;
 let timer;
-let time = 20;
+let time;
+let timeToAnswer;
 $(document).ready(function () {
 	let socket,
 		username,
@@ -66,11 +67,11 @@ $(document).ready(function () {
 			});
 
 			socket.on("config", (cfg) => {
-				time = cfg.timeToAnswer;
+				timeToAnswer = cfg.timeToAnswer;
 			});
 
 			socket.on("next-question", data => {
-				time = 20;
+				time = timeToAnswer;
 				clearInterval(timer);
 				if (lateJoin) {
 					$($(".already-started")[0]).hide();
