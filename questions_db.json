@@ -1,56 +1,152 @@
-[{
-    "content": "Jak nazywa się Amerykańska Wewnętrzna Agencja Wywiadowcza analizująca dane Internetowe?",
-    "answers": ["FBI", "NSA", "CIA", "NASA"],
-    "correct": 1
-},
-{
-	"content": "Co powoduje kombinacja CTRL+SHIFT+ESC w Windows 7?",
-	"answers": ["Zmienia tapetę", "Wyłącza komputer", "Robi zrzut ekranu", "Otwiera task manager"],
-	"correct": 3
-}, 
-{
-	"content": "Notacja #102816 oznacza zapis w systemie:",
-	"answers": ["Trójkowym", "Dwójkowym", "Szesnastkowym", "Dziesiętnym"],
-	"correct": 2
-}, 
-{
-	"content": "Program wykorzystywany do przechwytywania analizy ruchu sieciowego, to:",
-	"answers": ["Sniffer", "Viewer", "Keylogger", "Spyware"],
-	"correct": 0
-},
-{
-	"content": "Którą usługę należy zainstalować na serwerze Linux, aby korzystać z bezpiecznego zdalnego dostępu?",
-	"answers": ["RLOGIN", "TELNET", "TFPT", "SSH"],
-	"correct": 3
-},
-{
-	"content": "Wskaż domyślną maskę dla adresu IP klasy B:",
-	"answers": ["255.255.0.0", "255.255.255.255", "213.7.1337", "198.168.01.10"],
-	"correct": 0
-},
-{
-	"content": "Saturacja koloru nazywana jest inaczej:",
-	"answers": ["Saturnacja", "Jasność", "Nasycenie", "Przezroczystość"],
-	"correct": 2
-},
-{
-	"content": "Dołączenie zewnętrznego arkusza stylów do kodu HTML jest realizowane przy użyciu znacznika:",
-	"answers": ["<dołącz>", "<link>", "<załącz>", "<href>"],
-	"correct": 1
-},
-{
-	"content": "Który z formatów NIE pozwala na zapis plików animowanych?",
-	"answers": ["SWF", "SVG", "GIF", "ACE"],
-	"correct": 3
-},
-{
-	"content": "Systemem zarządzania treścią pozwalającym na łatwe utworzenie i aktualizację serwisu WWW jest:",
-	"answers": ["FTP", "HTTPS", "CMS", "SSH"],
-	"correct": 2
-},
-{
-	"content": "Czy po ukończeniu technikum można iść na studia?",
-	"answers": ["Tak, każda osoba, która ukończyła technikum i zdała maturę może iść na studia", "Nie, na studia można iść tylko po ukończeniu liceum", "Tak, na studia można iść bez matury, po ukończeniu technikum", "Nie, na studia można iść tylko po ukończeniu liceum i zdania matury"],
-	"correct": 0
-}
+[
+	{
+		"content": "Jak nazywa się Amerykańska Wewnętrzna Agencja Wywiadowcza analizująca dane Internetowe?",
+		"answers": [
+			"FBI",
+			"NSA",
+			"CIA",
+			"NASA"
+		],
+		"correct": 1
+	},
+	{
+		"content": "Co powoduje kombinacja CTRL+SHIFT+ESC w Windows 7?",
+		"answers": [
+			"Zmienia tapetę",
+			"Wyłącza komputer",
+			"Robi zrzut ekranu",
+			"Otwiera menager zadań"
+		],
+		"correct": 3
+	},
+	{
+		"content": "Notacja #102816 oznacza zapis w systemie:",
+		"answers": [
+			"Trójkowym",
+			"Dwójkowym",
+			"Szesnastkowym",
+			"Dziesiętnym"
+		],
+		"correct": 2
+	},
+	{
+		"content": "Program wykorzystywany do przechwytywania analizy ruchu sieciowego, to:",
+		"answers": [
+			"Sniffer",
+			"Viewer",
+			"Keylogger",
+			"Spyware"
+		],
+		"correct": 0
+	},
+	{
+		"content": "Którą usługę należy zainstalować na serwerze Linux, aby korzystać z bezpiecznego zdalnego dostępu?",
+		"answers": [
+			"RLOGIN",
+			"TELNET",
+			"TFPT",
+			"SSH"
+		],
+		"correct": 3
+	},
+	{
+		"content": "Wskaż domyślną maskę dla adresu IP klasy B:",
+		"answers": [
+			"255.255.0.0",
+			"255.255.255.255",
+			"213.7.1337",
+			"198.168.01.10"
+		],
+		"correct": 0
+	},
+	{
+		"content": "Saturacja koloru nazywana jest inaczej:",
+		"answers": [
+			"Saturnacja",
+			"Jasność",
+			"Nasycenie",
+			"Przezroczystość"
+		],
+		"correct": 2
+	},
+	{
+		"content": "Dołączenie zewnętrznego arkusza stylów do kodu HTML jest realizowane przy użyciu znacznika:",
+		"answers": [
+			"<dołącz>",
+			"<link>",
+			"<załącz>",
+			"<href>"
+		],
+		"correct": 1
+	},
+	{
+		"content": "Który z formatów NIE pozwala na zapis plików animowanych?",
+		"answers": [
+			"SWF",
+			"SVG",
+			"GIF",
+			"ACE"
+		],
+		"correct": 3
+	},
+	{
+		"content": "Systemem zarządzania treścią pozwalającym na łatwe utworzenie i aktualizację serwisu WWW jest:",
+		"answers": [
+			"FTP",
+			"HTTPS",
+			"CMS",
+			"SSH"
+		],
+		"correct": 2
+	},
+	{
+		"content": "Czy po ukończeniu technikum można iść na studia?",
+		"answers": [
+			"Tak, każda osoba, która ukończyła technikum i zdała maturę może iść na studia",
+			"Nie, na studia można iść tylko po ukończeniu liceum",
+			"Tak, na studia można iść bez matury, po ukończeniu technikum",
+			"Nie, na studia można iść tylko po ukończeniu liceum i zdania matury"
+		],
+		"correct": 0
+	},
+	{
+		"content": "Kto jest patronem Zespołu Szkół w Górze?",
+		"answers": [
+			"Maria Skłodowska-Curie",
+			"Gabriel Ratajczak",
+			"gen. Sylwester Kaliski",
+			"Adam Mickiewicz"
+		],
+		"correct": 2
+	},
+	{
+		"content": "Czy korzystając z internetu jesteś anonimowy?",
+		"answers": [
+			"Tak, przecież na każdej stronie mam inny nick",
+			"Tak, nikt nie wie kto siedzi po drugiej stronie",
+			"Nie, aby odkryć czyjąś tożsamość wystarczy mieć Jego adres IP",
+			"Tak, ponieważ używam antywirusa"
+		],
+		"correct": 2
+	},
+	{
+		"content": "Jakie jest napięcie w gnieździe USB?",
+		"answers": [
+			"12V",
+			"0.2A",
+			"5V",
+			"3kg"
+		],
+		"correct": 2
+	},
+	{
+		"content": "Za pomocą jakiego narzędzia można naprawić błędy logiczne dysku?",
+		"answers": [
+			"VSCode",
+			"chkdsk.exe",
+			"Młotek",
+			"defrag.exe"
+		],
+		"correct": 1
+	}
 ]
