@@ -1,5 +1,5 @@
 {
 	"port": "8080",
 	"timeToAnswer": "20",
-	"maxUsers": "0"
+	"maxWinners": 3
 }

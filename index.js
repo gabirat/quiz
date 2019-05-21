@@ -10,6 +10,7 @@ const port = config.port;
 /* eslint-disable no-console */
 server.listen(port, ()=>{
 	console.log(`[server] Listening on port ${port}...`);
+	console.log(`[server] Amount of max winners in this instance: ${config.maxWinners}`);
 });
 
 app.use(express.static(path.join(__dirname, "public")));
@@ -27,6 +28,7 @@ let currentQuestionNo = 0;
 function startQuiz() {
 	started = true;
 	io.emit("ready");
+	io.emit("config", config);
 	emitQuestion(currentQuestionNo++);
 	updateTimer = setInterval(()=>{
 		let u = [];
@@ -62,14 +64,14 @@ function startQuiz() {
 				io.emit("results", {
 					ranking: ranking
 				});
-				let top3 = ranking.slice(0,3);
-				for(let i in top3){
-					let c = hash.generate(top3[i].id);
-					io.to(top3[i].id).emit("winner", {
+				let top = config.maxWinners <=3 ? ranking.slice(0, config.maxWinners) : ranking.slice(0,3);
+				for(let i in top){
+					let c = hash.generate(top[i].id);
+					io.to(top[i].id).emit("winner", {
 						place: Number(i)+Number(1),
 						code: c
 					});
-					console.log(`[quiz] #${Number(i)+Number(1)}: ${users[top3[i].id].username} (hash: ${c})`);
+					console.log(`[quiz] #${Number(i)+Number(1)}: ${users[top[i].id].username} (hash: ${c})`);
 				}
 			}
 			else emitQuestion(currentQuestionNo++);
