@@ -73,6 +73,7 @@ function startQuiz() {
 					});
 					console.log(`[quiz] #${Number(i)+Number(1)}: ${users[top[i].id].username} (hash: ${c})`);
 				}
+				require("fs").writeFileSync(`rankdump${new Date().toISOString()}.json`, JSON.stringify(ranking));
 			}
 			else emitQuestion(currentQuestionNo++);
 		}
