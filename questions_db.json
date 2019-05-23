@@ -3,11 +3,11 @@
 		"content": "Jak nazywa się Amerykańska Wewnętrzna Agencja Wywiadowcza analizująca dane Internetowe?",
 		"answers": [
 			"FBI",
+			"SpaceX",
 			"NSA",
-			"CIA",
 			"NASA"
 		],
-		"correct": 1
+		"correct": 2
 	},
 	{
 		"content": "Co powoduje kombinacja CTRL+SHIFT+ESC w Windows 7?",
@@ -20,7 +20,17 @@
 		"correct": 3
 	},
 	{
-		"content": "Notacja #102816 oznacza zapis w systemie:",
+		"content": "Systemem zarządzania treścią pozwalającym na łatwe utworzenie i aktualizację serwisu WWW jest:",
+		"answers": [
+			"FTP (File Transer Protocol)",
+			"HTTPS (HyperText Transfer Protocol Secure",
+			"CMS (Content Management System)",
+			"SSH (Secure SHell)"
+		],
+		"correct": 2
+	},
+	{
+		"content": "Notacja #FF140A oznacza zapis w systemie:",
 		"answers": [
 			"Trójkowym",
 			"Dwójkowym",
@@ -30,34 +40,34 @@
 		"correct": 2
 	},
 	{
-		"content": "Program wykorzystywany do przechwytywania analizy ruchu sieciowego, to:",
+		"content": "Jak nazywa się narzędzie do prostego wizualnego tworzenia stron WWW?",
 		"answers": [
-			"Sniffer",
-			"Viewer",
-			"Keylogger",
-			"Spyware"
+			"Minecraft",
+			"WYSIWYG (What You See Is What You Get)",
+			"Windows Movie Maker",
+			"TES V: Skyrim"
 		],
-		"correct": 0
+		"correct": 1
 	},
 	{
-		"content": "Którą usługę należy zainstalować na serwerze Linux, aby korzystać z bezpiecznego zdalnego dostępu?",
+		"content": "Którą usługę należy użyć na serwerze Linux, aby korzystać z bezpiecznego zdalnego dostępu?",
 		"answers": [
-			"RLOGIN",
+			"Smash Mouth",
 			"TELNET",
-			"TFPT",
+			"All Star",
 			"SSH"
 		],
 		"correct": 3
 	},
 	{
-		"content": "Wskaż domyślną maskę dla adresu IP klasy B:",
+		"content": "Jaką rozdzielczość oznaczamy jako FullHD",
 		"answers": [
-			"255.255.0.0",
-			"255.255.255.255",
-			"213.7.1337",
-			"198.168.01.10"
+			"1337x420",
+			"1920x1080",
+			"1280x720",
+			"1024x768"
 		],
-		"correct": 0
+		"correct": 1
 	},
 	{
 		"content": "Saturacja koloru nazywana jest inaczej:",
@@ -75,29 +85,19 @@
 			"<dołącz>",
 			"<link>",
 			"<załącz>",
-			"<href>"
+			"<html>"
 		],
 		"correct": 1
 	},
 	{
-		"content": "Który z formatów NIE pozwala na zapis plików animowanych?",
+		"content": "Który z tych programów jest najbardziej powiązany z rozszerzeniem .docx",
 		"answers": [
-			"SWF",
-			"SVG",
-			"GIF",
-			"ACE"
+			"Microsoft Excel",
+			"Paint",
+			"Libre Office Base",
+			"Microsoft Word"
 		],
 		"correct": 3
-	},
-	{
-		"content": "Systemem zarządzania treścią pozwalającym na łatwe utworzenie i aktualizację serwisu WWW jest:",
-		"answers": [
-			"FTP",
-			"HTTPS",
-			"CMS",
-			"SSH"
-		],
-		"correct": 2
 	},
 	{
 		"content": "Czy po ukończeniu technikum można iść na studia?",
@@ -120,14 +120,14 @@
 		"correct": 2
 	},
 	{
-		"content": "Czy korzystając z internetu jesteś anonimowy?",
+		"content": "Składasz komputer - do którego złącza włożysz kartę graficzną?",
 		"answers": [
-			"Tak, przecież na każdej stronie mam inny nick",
-			"Tak, nikt nie wie kto siedzi po drugiej stronie",
-			"Nie, aby odkryć czyjąś tożsamość wystarczy mieć Jego adres IP",
-			"Tak, ponieważ używam antywirusa"
+			"PCI-E",
+			"LMAO",
+			"PS2",
+			"XDD"
 		],
-		"correct": 2
+		"correct": 0
 	},
 	{
 		"content": "Jakie jest napięcie w gnieździe USB?",
@@ -142,10 +142,10 @@
 	{
 		"content": "Za pomocą jakiego narzędzia można naprawić błędy logiczne dysku?",
 		"answers": [
-			"VSCode",
+			"Sony Vegas",
 			"chkdsk.exe",
 			"Młotek",
-			"defrag.exe"
+			"mspaint.exe"
 		],
 		"correct": 1
 	}
