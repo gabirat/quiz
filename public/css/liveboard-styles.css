@@ -22,14 +22,14 @@ body {
     display: grid;
     grid-gap: 0.5rem;
     grid-template-areas:
-        "questionNo questionNo questionNo ranking" 
-        "questionContent questionContent questionContent ranking"
-        "questionContent questionContent questionContent ranking"
-        "ans0 ans0 ans0 ranking"
-        "ans1 ans1 ans1 ranking"
-        "ans2 ans2 ans2 ranking"
-        "ans3 ans3 ans3 ranking";
-    grid-template-columns: repeat(3,1fr) minmax(300px, 1fr);
+        "questionNo questionNo questionNo ranking ranking" 
+        "questionContent questionContent questionContent ranking ranking"
+        "questionContent questionContent questionContent ranking ranking"
+        "ans0 ans0 ans0 ranking ranking"
+        "ans1 ans1 ans1 ranking ranking"
+        "ans2 ans2 ans2 ranking ranking"
+        "ans3 ans3 ans3 ranking ranking";
+    grid-template-columns: repeat(4,1fr) minmax(300px, 1fr);
 }
 
 .questionNo {
@@ -87,19 +87,55 @@ body {
 #participants {
     grid-area: ranking;
     border-left: 2px dashed white;
+    padding-left: 1rem;
+    overflow: hidden;
 }
 
 #participants-header {
     font-size: 3rem;
+    text-align: center;
 }
 
 #participants ul {
     list-style: none;
+    padding: 0;
 }
 
 #participants ul li {
-    margin-top: 0.25;
+    margin-top: 0.25rem;
+    font-size: 2rem;
+    display: flex;
+}
 
+#participants ul li div {
+    padding: 0.5rem 1rem;
+}
+
+#participants ul li .name {
+    background: rgb(60, 13, 66);
+    border-radius: 1000px 0 0 1000px;
+    font-weight: bold;
+    width: 85%;
+}
+
+#participants ul li .points {
+    background: rgb(34, 85, 151);
+    border-radius: 0 1000px 1000px 0;
+    width: 15%;
+}
+
+#participants ul li:nth-child(1) .name {
+    background: gold;
+    -webkit-text-stroke: 1px rgb(37, 37, 37);
+}
+
+#participants ul li:nth-child(2) .name {
+    background: silver;
+    -webkit-text-stroke: 1px rgb(37, 37, 37);
+}
+
+#participants ul li:nth-child(3) .name {
+    background: rgb(128, 68, 0);
 }
 
 #results-page {

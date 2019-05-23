@@ -15,7 +15,7 @@ $(document).ready(function () {
 		QuestionDOM.questionNo.text(`Pytanie ${data.question.questionNo}`);
 		let participants = [];
 		for (let i in data.participants) {
-			participants.push(`<li>${data.participants[i].username} : ${data.participants[i].score} punktów</li>`);
+			participants.push(`<li><div class="name">${data.participants[i].username}</div><div class="points">${data.participants[i].score}</div></li>`);
 		}
 		QuestionDOM.participants.html(participants.join(""));
 	});
